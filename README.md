@@ -12,8 +12,6 @@ Desenvolver uma aplicação web responsiva utilizando Ionic e Angular, aplicando
 - [ ] Página de detalhes dos jogos
 - [ ] Sistema de avaliações
 - [ ] Favoritos
-- [ ] Listas personalizadas
-- [ ] Diário de jogos
 
 ## Tecnologias
 
