@@ -96,4 +96,9 @@ export class GamesPage implements OnInit {
     });
     await alert.present();
   }
+
+  get skeletonArray() {
+    const columns = Math.floor(window.innerWidth / 250);
+    return Array(columns * 3);
+  }
 }
