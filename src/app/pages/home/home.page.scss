@@ -1,12 +1,10 @@
 #container {
   text-align: center;
-
-  height: 100%;
   position: absolute;
   left: 0;
   right: 0;
   margin-top: 0;
-  background: #020024;
+  background: #190ef0;
 background: linear-gradient(33deg, rgba(2, 0, 36, 1) 0%, rgba(8, 8, 102, 1) 43%, rgba(48, 6, 89, 1) 86%);
 }
 
@@ -19,7 +17,7 @@ background: linear-gradient(33deg, rgba(2, 0, 36, 1) 0%, rgba(8, 8, 102, 1) 43%,
   font-size: 16px;
   line-height: 22px;
 
-  color: #e0dbdb;
+  color: #c9c9c9;
 
   margin: 0;
 }
@@ -28,12 +26,32 @@ background: linear-gradient(33deg, rgba(2, 0, 36, 1) 0%, rgba(8, 8, 102, 1) 43%,
   text-decoration: none;
 }
 #info strong{
-  font-size: 40px;
+  font-size: 50px;
 }
 #info{
   font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px;
+  margin-top: 80px;
   margin-left: 40px;
   text-align: left;
+}
+#info p {
+  margin-top: 10px;
+  width: 400px;
+}
+#ion-cards{
+  display: flex;
+}
+ion-card{
+  text-align: center;
+}
+#ion-cards ion-card{
+  width: 20%;
+  height: fit-content;
+}
+h1{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 40px;
 }

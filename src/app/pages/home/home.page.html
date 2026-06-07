@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      GAMEBOXD
+      <img src="assets/GAMEBOXD-logo.png" alt="GameBoxd">
     </ion-title>
       <ion-buttons slot="primary">
     <ion-button routerLink="/games"> Ver Jogos </ion-button>
@@ -12,29 +12,49 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">GameBoxd</ion-title>
+      <ion-title size="large">
+      <img src="/assets/icon/GAMEBOXD-logo.png" alt="logo">
+    </ion-title>
     </ion-toolbar>
   </ion-header>
 
     <div id="container">
     <div id="info">
-  <strong>Projeto Ionic consumindo API</strong><br>
+  <strong>Encontre, avalie, descubra...</strong><br>
+<p>
+  Com o GameBoxd, explore milhares de jogos, registre suas experiências e compartilhe suas opiniões com a comunidade.
+</p>
+<h1>TEAM GINKLE</h1>
+<div id="ion-cards">
+  <ion-card>
+    <img src="/assets/staff-placeholder.png" alt="staff member">
+    <ion-card-title>Kaique Baccas</ion-card-title>
+  </ion-card>
+   <ion-card>
+    <img src="/assets/staff-placeholder.png" alt="staff member">
+    <ion-card-title>Kauan Lima</ion-card-title>
+  </ion-card>
+   <ion-card>
+    <img src="/assets/staff-placeholder.png" alt="staff member">
+    <ion-card-title>Murillo Freitas</ion-card-title>
+  </ion-card>
+   <ion-card>
+    <img src="/assets/staff-placeholder.png" alt="staff member">
+    <ion-card-title>Olavio Santana</ion-card-title>
+  </ion-card>
+   <ion-card>
+    <img src="/assets/staff-placeholder.png" alt="staff member">
+    <ion-card-title>Isabela Santos</ion-card-title>
+  </ion-card>
 
-      feito por Ginkle Team<br>
-      Kauan Lima<br>
-      Kaique Baccas<br>
-      Murillo Freitas<br>
-      Isabela Santos<br>
-      Olavio Santana<br>
-    <br>
+</div>
 
 
     <ion-card>
       <ion-card-content>
     <p>
       API utilizada: RAWG Video Games Database<br>
-      <a href="https://rawg.io/apidocs" target="_blank">https://rawg.io/apidocs</a><br>
-      <ion-button routerLink="/games">Ver jogos</ion-button>
+      <a href="https://rawg.io/apidocs" target="_blank">https://rawg.io/apidocs</a>
     </p>
   </ion-card-content>
   </ion-card>
