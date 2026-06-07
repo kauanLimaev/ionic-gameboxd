@@ -1,0 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ game.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img class="game-banner" [src]="game.background_image" [alt]="game.name">
+</ion-content>
+
+<ion-text>{{ game.name }}</ion-text>
