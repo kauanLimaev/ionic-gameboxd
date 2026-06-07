@@ -1,8 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      GameBoxd
+      GAMEBOXD
     </ion-title>
+      <ion-buttons slot="primary">
+    <ion-button routerLink="/games"> Ver Jogos </ion-button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,22 +16,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Projeto Ionic consumindo API</strong><br>
-    feito por Ginkle Team<br>
-    <p>
+    <div id="container">
+    <div id="info">
+  <strong>Projeto Ionic consumindo API</strong><br>
 
+      feito por Ginkle Team<br>
       Kauan Lima<br>
       Kaique Baccas<br>
       Murillo Freitas<br>
       Isabela Santos<br>
       Olavio Santana<br>
-    </p>
     <br>
+
+
+    <ion-card>
+      <ion-card-content>
     <p>
       API utilizada: RAWG Video Games Database<br>
       <a href="https://rawg.io/apidocs" target="_blank">https://rawg.io/apidocs</a><br>
       <ion-button routerLink="/games">Ver jogos</ion-button>
     </p>
-  </div>
+  </ion-card-content>
+  </ion-card>
+</div>
+</div>
 </ion-content>

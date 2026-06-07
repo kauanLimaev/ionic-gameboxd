@@ -1,0 +1,39 @@
+#container {
+  text-align: center;
+
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  background: #020024;
+background: linear-gradient(33deg, rgba(2, 0, 36, 1) 0%, rgba(8, 8, 102, 1) 43%, rgba(48, 6, 89, 1) 86%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #e0dbdb;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+#info strong{
+  font-size: 40px;
+}
+#info{
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  margin-left: 40px;
+  text-align: left;
+}
