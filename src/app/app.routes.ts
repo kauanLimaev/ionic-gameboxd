@@ -21,5 +21,4 @@ export const routes: Routes = [
         (m) => m.GameDetailsPage,
       ),
   },
->>>>>>> 85e67809ce7193c50567442a9f61db5412a8a9c1
 ];
