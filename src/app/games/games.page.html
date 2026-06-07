@@ -13,14 +13,29 @@
     </ion-toolbar>
   </ion-header>
 
+  @if (loading) {
+  <div id="games-grid">
+    <ion-card *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]">
+      <ion-card-content>
+        <ion-skeleton-text animated style="width: 100%; height: 280px;"></ion-skeleton-text>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  }
+  @else {
   <div id="games-grid">
     <ion-card *ngFor="let game of games">
       <img [src]="game.background_image" alt="{{ game.name }}" />
     </ion-card>
   </div>
+  }
 
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll [disabled]="hasError" threshold="100px" (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando mais jogos...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+
+  @if (errorMessage) {
+  <ion-text color="danger">{{ errorMessage }}</ion-text>
+  }
 </ion-content>
