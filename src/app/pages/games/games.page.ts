@@ -11,7 +11,7 @@ import {
   IonSkeletonText,
   IonText,
 } from '@ionic/angular/standalone';
-import { Rawg } from '../services/rawg';
+import { Rawg } from '../../services/rawg';
 import { CommonModule } from '@angular/common';
 import { AlertController } from '@ionic/angular';
 
@@ -100,5 +100,9 @@ export class GamesPage implements OnInit {
   get skeletonArray() {
     const columns = Math.floor(window.innerWidth / 250);
     return Array(columns * 3);
+  }
+
+  openGameDetails(gameId: number) {
+    window.location.href = `/game/${gameId}`;
   }
 }

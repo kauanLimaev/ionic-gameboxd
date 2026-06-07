@@ -9,9 +9,17 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
-    path: 'games',
-    loadComponent: () => import('./games/games.page').then( m => m.GamesPage)
   },
-
+  {
+    path: 'games',
+    loadComponent: () =>
+      import('./pages/games/games.page').then((m) => m.GamesPage),
+  },
+  {
+    path: 'game/:id',
+    loadComponent: () =>
+      import('./pages/game-details/game-details.page').then(
+        (m) => m.GameDetailsPage,
+      ),
+  },
 ];

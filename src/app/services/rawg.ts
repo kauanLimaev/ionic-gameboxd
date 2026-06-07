@@ -13,4 +13,10 @@ export class Rawg {
       `https://api.rawg.io/api/games?key=${environment.rawgApiKey}&page=${page}`,
     );
   }
+
+  getGameDetails(gameId: number) {
+    return this.http.get(
+      `https://api.rawg.io/api/games/${gameId}?key=${environment.rawgApiKey}`,
+    );
+  }
 }

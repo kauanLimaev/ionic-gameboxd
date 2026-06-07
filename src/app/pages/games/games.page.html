@@ -27,7 +27,8 @@
   @else {
   <div id="games-grid">
     @for (game of games; track game) {
-    <ion-card>
+    <ion-card (click)="openGameDetails(game.id)">
+      <ion-text id="game-name">{{ game.name }}</ion-text>
       <img [src]="game.background_image" alt="{{ game.name }}" />
     </ion-card>
     }
