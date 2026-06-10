@@ -4,6 +4,9 @@
       <img src="assets/GAMEBOXD-logo.png" alt="GameBoxd">
     </ion-title>
     <ion-buttons slot="end">
+      <ion-button (click)="toggleTheme()">
+        <ion-icon slot="icon-only" [name]="isDark ? 'sunny' : 'moon'"></ion-icon>
+      </ion-button>
       <ion-button routerLink="/games" fill="solid">Ver jogos</ion-button>
     </ion-buttons>
   </ion-toolbar>

@@ -1,6 +1,6 @@
 ion-toolbar {
-  --background: rgba(15, 15, 14, 0.94);
-  --color: #ffffff;
+  --background: var(--ion-toolbar-background);
+  --color: var(--ion-toolbar-color);
 }
 
 ion-title img {
@@ -9,15 +9,15 @@ ion-title img {
 }
 
 ion-content {
-  --background: #10100f;
+  --background: var(--app-bg);
 }
 
 .home-shell {
   min-height: 100%;
-  color: #ffffff;
+  color: var(--ion-text-color);
   background:
-    radial-gradient(circle at top left, rgba(30, 172, 126, 0.24), transparent 34rem),
-    linear-gradient(135deg, #10100f 0%, #201718 52%, #14120f 100%);
+    radial-gradient(circle at top left, rgba(30, 172, 126, 0.18), transparent 34rem),
+    var(--app-bg-gradient);
   padding: 28px clamp(16px, 4vw, 56px) 40px;
 }
 
@@ -35,7 +35,7 @@ ion-content {
 .section-heading p,
 .api-section p {
   margin: 0 0 10px;
-  color: #56d99d;
+  color: var(--app-accent);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -53,7 +53,7 @@ ion-content {
 .hero-copy > p:not(.eyebrow) {
   max-width: 660px;
   margin: 20px 0 0;
-  color: #c9d0dc;
+  color: var(--app-subtle);
   font-size: clamp(1rem, 2vw, 1.22rem);
   line-height: 1.55;
 }
@@ -68,7 +68,7 @@ ion-content {
 
 .hero-actions a,
 .api-section a {
-  color: #ffffff;
+  color: var(--ion-text-color);
   font-weight: 700;
   text-decoration: none;
 }
@@ -77,10 +77,10 @@ ion-content {
   display: grid;
   gap: 22px;
   padding: 26px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--app-border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  background: var(--app-surface);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
 }
 
 .hero-panel img {
@@ -98,20 +98,20 @@ ion-content {
 .hero-stats span,
 .feature-grid article,
 .api-section {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--app-border);
   border-radius: 8px;
-  background: rgba(15, 15, 14, 0.64);
+  background: var(--app-surface);
 }
 
 .hero-stats span {
   padding: 16px;
-  color: #b8c1cd;
+  color: var(--app-subtle);
   font-size: 0.9rem;
 }
 
 .hero-stats strong {
   display: block;
-  color: #ffffff;
+  color: var(--ion-text-color);
   font-size: 1.4rem;
 }
 
@@ -134,7 +134,7 @@ ion-content {
 
 .feature-grid p {
   margin: 8px 0 0;
-  color: #c6ceda;
+  color: var(--app-subtle);
   line-height: 1.45;
 }
 
@@ -152,8 +152,6 @@ ion-content {
   margin: 0;
   overflow: hidden;
   border-radius: 8px;
-  background: #1c1916;
-  color: #ffffff;
 }
 
 .team-grid img {

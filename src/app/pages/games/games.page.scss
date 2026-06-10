@@ -1,23 +1,23 @@
 ion-toolbar {
-  --background: rgba(15, 15, 14, 0.95);
-  --color: #ffffff;
+  --background: var(--ion-toolbar-background);
+  --color: var(--ion-toolbar-color);
 }
 
 ion-content {
-  --background: #10100f;
+  --background: var(--app-bg);
 }
 
 .feed-hero {
   padding: 34px clamp(14px, 4vw, 40px) 18px;
-  color: #ffffff;
+  color: var(--ion-text-color);
   background:
     linear-gradient(135deg, rgba(31, 155, 121, 0.2), transparent 42%),
-    #171513;
+    var(--app-bg);
 }
 
 .feed-hero p {
   margin: 0 0 8px;
-  color: #56d99d;
+  color: var(--app-accent);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
@@ -35,7 +35,7 @@ ion-content {
   display: block;
   max-width: 620px;
   margin-top: 12px;
-  color: #c8d0dd;
+  color: var(--app-subtle);
   line-height: 1.5;
 }
 
@@ -53,7 +53,7 @@ ion-content {
   border-radius: 8px;
   aspect-ratio: 16 / 10;
   cursor: pointer;
-  background: #1d1a17;
+  background: var(--ion-card-background);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -101,7 +101,7 @@ ion-content {
 }
 
 .game-meta span:last-child {
-  color: #56d99d;
+  color: var(--app-accent);
   font-weight: 800;
 }
 
@@ -132,12 +132,12 @@ ion-content {
 .rawg-credit {
   margin: 0;
   padding: 0 clamp(12px, 4vw, 40px) 28px;
-  color: #8f9aaa;
+  color: var(--app-subtle);
   font-size: 0.82rem;
 }
 
 .rawg-credit a {
-  color: #56d99d;
+  color: var(--app-accent);
   font-weight: 800;
   text-decoration: none;
 }

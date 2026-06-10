@@ -1,2 +1,49 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+:root {
+  --ion-background-color: #f5f5f3;
+  --ion-background-color-rgb: 245, 245, 243;
+  --ion-text-color: #0f0f0e;
+  --ion-text-color-rgb: 15, 15, 14;
+
+  --ion-color-primary: #1a9e72;
+  --ion-color-primary-rgb: 26, 158, 114;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #178060;
+  --ion-color-primary-tint: #31a87e;
+
+  --ion-toolbar-background: rgba(245, 245, 243, 0.96);
+  --ion-toolbar-color: #0f0f0e;
+
+  --ion-card-background: #ffffff;
+
+  --app-surface: rgba(0, 0, 0, 0.04);
+  --app-border: rgba(0, 0, 0, 0.1);
+  --app-subtle: #4a5568;
+  --app-accent: #1a9e72;
+  --app-bg: #f5f5f3;
+  --app-bg-gradient: linear-gradient(135deg, #f5f5f3 0%, #eae8e4 52%, #f0ede8 100%);
+}
+
+.ion-palette-dark {
+  --ion-background-color: #10100f;
+  --ion-background-color-rgb: 16, 16, 15;
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+
+  --ion-color-primary: #56d99d;
+  --ion-color-primary-rgb: 86, 217, 157;
+  --ion-color-primary-contrast: #0f0f0e;
+  --ion-color-primary-shade: #4cc48d;
+  --ion-color-primary-tint: #67dda7;
+
+  --ion-toolbar-background: rgba(15, 15, 14, 0.94);
+  --ion-toolbar-color: #ffffff;
+
+  --ion-card-background: #1c1916;
+
+  --app-surface: rgba(255, 255, 255, 0.06);
+  --app-border: rgba(255, 255, 255, 0.1);
+  --app-subtle: #c9d0dc;
+  --app-accent: #56d99d;
+  --app-bg: #10100f;
+  --app-bg-gradient: linear-gradient(135deg, #10100f 0%, #201718 52%, #14120f 100%);
+}
