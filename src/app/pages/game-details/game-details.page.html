@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+<<<<<<< HEAD
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/games" text=""></ion-back-button>
     </ion-buttons>
     <ion-title>{{ game?.name || 'Detalhes do jogo' }}</ion-title>
+=======
+    <ion-title>{{ game.name }}</ion-title>
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+<<<<<<< HEAD
   @if (loading) {
   <section class="details-shell">
     <ion-skeleton-text animated class="banner-skeleton"></ion-skeleton-text>
@@ -90,3 +95,9 @@
     <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">RAWG</a>.
   </p>
 </ion-content>
+=======
+  <img class="game-banner" [src]="game.background_image" [alt]="game.name">
+</ion-content>
+
+<ion-text>{{ game.name }}</ion-text>
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d

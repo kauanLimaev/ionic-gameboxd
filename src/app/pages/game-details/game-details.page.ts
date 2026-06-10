@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
+=======
+import { FormsModule } from '@angular/forms';
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
 import {
   IonContent,
   IonHeader,
   IonTitle,
   IonToolbar,
+<<<<<<< HEAD
   IonButtons,
   IonBackButton,
   IonButton,
@@ -13,6 +18,11 @@ import {
 } from '@ionic/angular/standalone';
 import { Rawg } from '../../services/rawg';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+=======
+  IonText,
+} from '@ionic/angular/standalone';
+import { Rawg } from '../../services/rawg';
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
 
 @Component({
   selector: 'app-game-details',
@@ -24,6 +34,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
     IonHeader,
     IonTitle,
     IonToolbar,
+<<<<<<< HEAD
     IonButtons,
     IonBackButton,
     IonButton,
@@ -31,10 +42,16 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
     IonChip,
     CommonModule,
     RouterLink,
+=======
+    CommonModule,
+    FormsModule,
+    IonText,
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
   ],
 })
 export class GameDetailsPage implements OnInit {
   game: any;
+<<<<<<< HEAD
   loading = true;
   errorMessage = '';
   private genreTranslations: Record<string, string> = {
@@ -65,12 +82,16 @@ export class GameDetailsPage implements OnInit {
     private rawg: Rawg,
     private route: ActivatedRoute,
   ) {}
+=======
+  constructor(private rawg: Rawg) {}
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
 
   ngOnInit() {
     this.loadGameDetails();
   }
 
   loadGameDetails() {
+<<<<<<< HEAD
     const gameId = Number(this.route.snapshot.paramMap.get('id'));
     this.loading = true;
     this.rawg.getGameDetails(gameId).subscribe({
@@ -107,5 +128,23 @@ export class GameDetailsPage implements OnInit {
       this.game?.description_raw ||
       'Descrição indisponível.'
     );
+=======
+    const gameId = this.getGameIdFromUrl();
+    this.rawg.getGameDetails(gameId).subscribe(
+      (game) => {
+        console.log('Game details:', game);
+        this.game = game;
+      },
+      (error) => {
+        // Handle error
+      },
+    );
+  }
+
+  getGameIdFromUrl(): number {
+    const url = window.location.pathname;
+    const parts = url.split('/');
+    return parseInt(parts[parts.length - 1], 10);
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
   }
 }

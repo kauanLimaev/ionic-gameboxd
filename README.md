@@ -24,12 +24,16 @@ Desenvolver uma aplicação web responsiva utilizando Ionic e Angular, aplicando
 
 ## Instalação
 
+<<<<<<< HEAD
 Use Node.js `20.19` ou superior.
 
+=======
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
 ```bash
 git clone https://github.com/kauanLimaev/ionic-gameboxd.git
 cd ionic-gameboxd
 npm install
+<<<<<<< HEAD
 cp src/environments/environment.example.ts src/environments/environment.ts
 ionic serve
 ```
@@ -56,3 +60,7 @@ Para publicar no Vercel sem expor a chave no bundle do Angular:
 4. Use `www` como pasta de saida.
 
 Em producao, o app chama a rota `/api/rawg`, que usa a variavel `RAWG_API_KEY` no servidor do Vercel. Ainda assim, mantenha o backlink obrigatorio para a RAWG nas paginas que usam os dados.
+=======
+ionic serve
+```
+>>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
