@@ -1,52 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-<<<<<<< HEAD
     <ion-title>Catálogo de Jogos</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home" text=""></ion-back-button>
     </ion-buttons>
-=======
-    <ion-title>
-      Game Feed
-    </ion-title>
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<<<<<<< HEAD
   <section class="feed-hero">
     <p>Explorar</p>
     <h1>Jogos populares</h1>
     <span>Toque em um card para ver os detalhes, plataformas e gêneros.</span>
   </section>
-=======
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Game Feed</ion-title>
-    </ion-toolbar>
-  </ion-header>
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
 
   @if (loading) {
   <div id="games-grid">
     @for (_ of skeletonArray; track $index) {
-<<<<<<< HEAD
     <ion-card class="game-card skeleton-card">
       <ion-skeleton-text animated></ion-skeleton-text>
-=======
-    <ion-card>
-      <ion-card-content>
-        <ion-skeleton-text animated style="width: 100%; height: 280px;"></ion-skeleton-text>
-      </ion-card-content>
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
     </ion-card>
     }
   </div>
   }
   @else {
   <div id="games-grid">
-<<<<<<< HEAD
     @for (game of games; track game.id) {
     <ion-card class="game-card" button (click)="openGameDetails(game.id)">
       <img [src]="game.background_image || 'assets/icon/favicon.png'" [alt]="game.name" />
@@ -57,12 +35,6 @@
           <span>{{ game.rating || 'Sem nota' }}</span>
         </div>
       </div>
-=======
-    @for (game of games; track game) {
-    <ion-card (click)="openGameDetails(game.id)">
-      <ion-text id="game-name">{{ game.name }}</ion-text>
-      <img [src]="game.background_image" alt="{{ game.name }}" />
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
     </ion-card>
     }
   </div>
@@ -74,7 +46,6 @@
   </ion-infinite-scroll>
 
   @if (errorMessage) {
-<<<<<<< HEAD
   <ion-text class="error-message" color="danger">{{ errorMessage }}</ion-text>
   }
 
@@ -83,8 +54,3 @@
     <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">RAWG</a>.
   </p>
 </ion-content>
-=======
-  <ion-text color="danger">{{ errorMessage }}</ion-text>
-  }
-</ion-content>
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d

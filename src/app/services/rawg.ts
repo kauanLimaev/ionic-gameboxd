@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
 export class Rawg {
   constructor(private http: HttpClient) {}
 
-<<<<<<< HEAD
   private readonly apiKey = environment.rawgApiKey?.trim();
 
   getGames(page: number) {
@@ -31,17 +30,5 @@ export class Rawg {
 
     searchParams.set('path', path);
     return `/api/rawg?${searchParams.toString()}`;
-=======
-  getGames(page: number) {
-    return this.http.get(
-      `https://api.rawg.io/api/games?key=${environment.rawgApiKey}&page=${page}`,
-    );
-  }
-
-  getGameDetails(gameId: number) {
-    return this.http.get(
-      `https://api.rawg.io/api/games/${gameId}?key=${environment.rawgApiKey}`,
-    );
->>>>>>> c4a2bc986eb4b703b4d38543ccee62873358d50d
   }
 }
