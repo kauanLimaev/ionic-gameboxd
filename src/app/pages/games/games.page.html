@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Catálogo de Jogos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <section class="feed-hero">
+    <p>Explorar</p>
+    <h1>Jogos populares</h1>
+    <span>Toque em um card para ver os detalhes, plataformas e gêneros.</span>
+  </section>
+
+  @if (loading) {
+  <div id="games-grid">
+    @for (_ of skeletonArray; track $index) {
+    <ion-card class="game-card skeleton-card">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-card>
+    }
+  </div>
+  }
+  @else {
+  <div id="games-grid">
+    @for (game of games; track game.id) {
+    <ion-card class="game-card" button (click)="openGameDetails(game.id)">
+      <img [src]="game.background_image || 'assets/icon/favicon.png'" [alt]="game.name" />
+      <div class="game-overlay">
+        <ion-text class="game-name">{{ game.name }}</ion-text>
+        <div class="game-meta">
+          <span>{{ game.released || 'Sem data' }}</span>
+          <span>{{ game.rating || 'Sem nota' }}</span>
+        </div>
+      </div>
+    </ion-card>
+    }
+  </div>
+  }
+
+  <ion-infinite-scroll [disabled]="hasError" threshold="100px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando mais jogos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  @if (errorMessage) {
+  <ion-text class="error-message" color="danger">{{ errorMessage }}</ion-text>
+  }
+
+  <p class="rawg-credit">
+    Dados de jogos por
+    <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">RAWG</a>.
+  </p>
+</ion-content>

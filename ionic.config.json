@@ -1,0 +1,7 @@
+{
+  "name": "GameBoxd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

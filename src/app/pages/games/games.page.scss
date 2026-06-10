@@ -1,0 +1,150 @@
+ion-toolbar {
+  --background: rgba(15, 15, 14, 0.95);
+  --color: #ffffff;
+}
+
+ion-content {
+  --background: #10100f;
+}
+
+.feed-hero {
+  padding: 34px clamp(14px, 4vw, 40px) 18px;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(31, 155, 121, 0.2), transparent 42%),
+    #171513;
+}
+
+.feed-hero p {
+  margin: 0 0 8px;
+  color: #56d99d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.feed-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.feed-hero span {
+  display: block;
+  max-width: 620px;
+  margin-top: 12px;
+  color: #c8d0dd;
+  line-height: 1.5;
+}
+
+#games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 18px clamp(12px, 4vw, 40px) 28px;
+}
+
+.game-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 16 / 10;
+  cursor: pointer;
+  background: #1d1a17;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.game-card img,
+.skeleton-card ion-skeleton-text {
+  width: 100%;
+  height: 100%;
+}
+
+.game-card img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 10px;
+  padding: 42px 12px 12px;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0));
+}
+
+.game-name {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.game-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #cbd3df;
+  font-size: 0.78rem;
+}
+
+.game-meta span:last-child {
+  color: #56d99d;
+  font-weight: 800;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.34);
+}
+
+.game-card:hover img {
+  filter: brightness(0.78);
+  transform: scale(1.04);
+}
+
+.skeleton-card {
+  padding: 0;
+}
+
+.skeleton-card ion-skeleton-text {
+  margin: 0;
+  --border-radius: 0;
+}
+
+.error-message {
+  display: block;
+  padding: 0 40px 32px;
+}
+
+.rawg-credit {
+  margin: 0;
+  padding: 0 clamp(12px, 4vw, 40px) 28px;
+  color: #8f9aaa;
+  font-size: 0.82rem;
+}
+
+.rawg-credit a {
+  color: #56d99d;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  #games-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

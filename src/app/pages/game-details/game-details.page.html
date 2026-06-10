@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/games" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ game?.name || 'Detalhes do jogo' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if (loading) {
+  <section class="details-shell">
+    <ion-skeleton-text animated class="banner-skeleton"></ion-skeleton-text>
+    <div class="details-grid">
+      <ion-skeleton-text animated class="title-skeleton"></ion-skeleton-text>
+      <ion-skeleton-text animated class="text-skeleton"></ion-skeleton-text>
+      <ion-skeleton-text animated class="text-skeleton short"></ion-skeleton-text>
+    </div>
+  </section>
+  } @else if (game) {
+  <section class="details-hero">
+    <img
+      class="game-banner"
+      [src]="game.background_image || 'assets/icon/favicon.png'"
+      [alt]="game.name"
+    >
+    <div class="hero-content">
+      <p>{{ game.released ? (game.released | date:'yyyy') : 'Sem data' }}</p>
+      <h1>{{ game.name }}</h1>
+      <div class="hero-meta">
+        <span>Nota {{ game.rating || 'Sem nota' }}</span>
+        <span>{{ game.playtime || 0 }}h média</span>
+        <span>{{ game.metacritic || 'Sem nota Metacritic' }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-grid">
+    <article class="description">
+      <h2>Sobre o jogo</h2>
+      <div [innerHTML]="getDescription()"></div>
+    </article>
+
+    <aside class="facts">
+      <div>
+        <span>Lançamento</span>
+        <strong>{{ game.released || 'Indisponível' }}</strong>
+      </div>
+      <div>
+        <span>Desenvolvedoras</span>
+        <strong>{{ listNames(game.developers) }}</strong>
+      </div>
+      <div>
+        <span>Publicadoras</span>
+        <strong>{{ listNames(game.publishers) }}</strong>
+      </div>
+      <div>
+        <span>Plataformas</span>
+        <strong>{{ listPlatforms(game.platforms) }}</strong>
+      </div>
+
+      @if (game.website) {
+      <ion-button expand="block" [href]="game.website" target="_blank" rel="noreferrer">
+        Site oficial
+      </ion-button>
+      }
+    </aside>
+  </section>
+
+  @if (game.genres?.length) {
+  <section class="chips-section">
+    <h2>Gêneros</h2>
+    <div class="chips">
+      @for (genre of game.genres; track genre.id) {
+      <ion-chip>{{ translateGenre(genre.name) }}</ion-chip>
+      }
+    </div>
+  </section>
+  }
+  } @else {
+  <section class="empty-state">
+    <h1>Jogo não encontrado</h1>
+    <p>{{ errorMessage || 'Não foi possível carregar os detalhes deste jogo.' }}</p>
+    <ion-button routerLink="/games">Voltar para jogos</ion-button>
+  </section>
+  }
+
+  <p class="rawg-credit">
+    Dados de jogos por
+    <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">RAWG</a>.
+  </p>
+</ion-content>

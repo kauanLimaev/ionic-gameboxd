@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/GAMEBOXD-logo.png" alt="GameBoxd">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/games" fill="solid">Ver jogos</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="home-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">GameBoxd</p>
+        <h1>Encontre seu próximo jogo favorito.</h1>
+        <p>
+          Explore milhares de jogos, acompanhe novas descobertas e abra detalhes
+          com notas, plataformas, gêneros e datas de lançamento em um feed rápido.
+        </p>
+        <div class="hero-actions">
+          <ion-button routerLink="/games" size="large">Explorar jogos</ion-button>
+          <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">Documentação da API</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Resumo do GameBoxd">
+        <img src="/assets/GAMEBOXD-logo.png" alt="GameBoxd">
+        <div class="hero-stats">
+          <span>
+            <strong>500k+</strong>
+            jogos indexados
+          </span>
+          <span>
+            <strong>RAWG</strong>
+            dados atualizados
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid" aria-label="Recursos">
+      <article>
+        <strong>Descubra</strong>
+        <p>Navegue por jogos populares em um grid visual feito para agilidade.</p>
+      </article>
+      <article>
+        <strong>Compare</strong>
+        <p>Confira notas, datas de lançamento, gêneros e plataformas principais.</p>
+      </article>
+      <article>
+        <strong>Aprofunde</strong>
+        <p>Abra a página de detalhes para ver descrições, sites oficiais e metadados.</p>
+      </article>
+    </section>
+
+    <section class="team-section">
+      <div class="section-heading">
+        <p>Viventi</p>
+        <h2>Desenvolvedores</h2>
+      </div>
+
+      <div class="team-grid">
+        <ion-card>
+          <img src="/assets/devs/Kaique-Ramos.jpeg" alt="Kaique Baccas">
+          <ion-card-title>Kaique Baccas</ion-card-title>
+        </ion-card>
+        <ion-card>
+          <img src="/assets/devs/Kauan-Souza.jpeg" alt="Kauan Lima">
+          <ion-card-title>Kauan Lima</ion-card-title>
+        </ion-card>
+        <ion-card>
+          <img src="/assets/devs/Murillo-Freitas.jpeg" alt="Murillo Freitas">
+          <ion-card-title>Murillo Freitas</ion-card-title>
+        </ion-card>
+        <ion-card>
+          <img src="/assets/devs/Olavio-Almeida.jpeg" alt="Olavio Santana">
+          <ion-card-title>Olavio Santana</ion-card-title>
+        </ion-card>
+        <ion-card>
+          <img src="/assets/devs/Isabela-Lima.jpeg" alt="Isabela Santos">
+          <ion-card-title>Isabela Santos</ion-card-title>
+        </ion-card>
+      </div>
+    </section>
+
+    <section class="api-section">
+      <p>API utilizada</p>
+      <a href="https://rawg.io/apidocs" target="_blank" rel="noreferrer">
+        Banco de dados de jogos RAWG
+      </a>
+    </section>
+  </div>
+</ion-content>
